@@ -55,3 +55,34 @@ def divide(a: float, b: float) -> float:
         print("Error: Division by zero is not allowed.")
         return None
     return a / b
+
+def simple_interest(principal: float, rate: float, time: float) -> float:
+    """
+    Calculate the simple interest.
+
+    Parameters:
+    principal (float): The principal amount.
+    rate (float): Annual interest rate as a percentage.
+    time (float): Time in years.
+
+    Returns:
+    float: The simple interest earned.
+    """
+    return round((principal * rate * time) / 100, 2)
+
+
+def compound_interest(principal: float, rate: float, time: float, compounds_per_year: int = 1) -> float:
+    """
+    Calculate the compound interest.
+
+    Parameters:
+    principal (float): The principal amount.
+    rate (float): Annual interest rate as a percentage.
+    time (float): Time in years.
+    compounds_per_year (int): Number of times interest is compounded per year.
+
+    Returns:
+    float: The compound interest earned.
+    """
+    amount = principal * (1 + (rate / 100) / compounds_per_year) ** (compounds_per_year * time)
+    return round(amount - principal, 2)
