@@ -1,3 +1,18 @@
+# Instructions
+
+## Clone the Repo
+
+```
+git clone https://github.com/gchandra10/pytest-demo.git
+```
+
+## Sync
+
+```
+cd pytest-demo
+uv sync
+```
+
 ## Run pytests
 
 **Run tests**
